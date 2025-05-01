@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+}
+img{
+    width: 100%;
+    
+}
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+.parent{
+ display: flex;
+ justify-content: center;
+ gap: 15px;
+ flex-wrap: wrap;
+ margin-top: 10px;
+}
+.cart{
+    flex-basis: 250px;
+    background-color: rgb(233, 233, 233);
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 7px 7px 9px -3px rgba(0,0,0,0.75);
+
+}
+.cart:hover{
+    transform: scale(1.05);
+}
+.cart>img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+.cart>h2{
+    text-transform: uppercase;
+}
+.price.red{
+    color: red;
+}
+.btn.red{
+    background-color: red;
+}
+.price.blue{
+    color: blue;
+}
+.btn.blue{
+    background-color: blue;
+}
+.price.purple{
+    color: purple;
+}
+.btn.purple{
+    background-color: purple;
+}
+.btn{
+    width: 100%;
+    border: none;
+    padding: 18px;
+    color: white;
+    text-transform: uppercase;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-weight: 900;
+}
+.cart>div{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.price{
+    margin-top: auto;
+    font-weight: 900;
+}
+.price+p{
+    color: gold;
+}
