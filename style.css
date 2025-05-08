@@ -25,15 +25,21 @@ body{
     flex-direction: column;
     align-items: center;
     box-shadow: 7px 7px 9px -3px rgba(0,0,0,0.75);
+    transition: transform 0.8s 0.5s;
 
 }
 .cart:hover{
     transform: scale(1.05);
+    
+}
+.cart:hover>img{
+    transform: scaleX(-1);
 }
 .cart>img{
     width: 200px;
     height: 200px;
     object-fit: cover;
+    transition: transform 0.8s 0.5s;
 }
 .cart>h2{
     text-transform: uppercase;
@@ -77,4 +83,38 @@ body{
 }
 .price+p{
     color: gold;
+}
+.message{
+    background-color: green;
+    border-radius: 6px;
+    color: white;
+    position: fixed;
+    padding: 5px;
+    left: 50%;
+    z-index: 10;
+    transform: translateX(-50%);
+    top: -250px;
+    animation: slidein 5s linear 1;
+}
+@keyframes slidein{
+    0%{ top:-250px;}
+    25%{ top: 50px;}
+    80%{ top: 50px;}
+    100%{ top:-250px;}
+}
+.circle{
+    background-color: blueviolet;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    animation: colorchange 2s   infinite alternate ;
+    
+}
+
+@keyframes colorchange{
+    from{ background-color: blueviolet; transform: scale(1);}
+    to{background-color: yellow; transform: scale(2);}
 }
